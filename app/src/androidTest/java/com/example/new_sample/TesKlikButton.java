@@ -143,13 +143,53 @@ public class TesKlikButton {
         onView(withId(R.id.input)).check(matches(withText(".")));
     }
 
+    @Test
+    public void testTambah(){
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("8")));
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8+")));
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10")));
+    }
 
+    @Test
+    public void testKurang(){
+        onView(withId(R.id.button9)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("9")));
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("9-")));
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("4")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("5")));
+    }
 
+    @Test
+    public void testKali(){
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("3")));
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("3×")));
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("4")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("12")));
+    }
 
-
-
-
-
-
-
+    @Test
+    public void testBagi(){
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("3")));
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("30")));
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("30/")));
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("15")));
+    }
 }
