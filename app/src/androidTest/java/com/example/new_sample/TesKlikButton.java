@@ -65,7 +65,7 @@ public class TesKlikButton {
     @Test
     public void testKlikButtonDelapan(){
         //cari button8 terus di klik
-        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button8)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("8")));
     }
     @Test
@@ -84,49 +84,57 @@ public class TesKlikButton {
     public void testKlikButtonEqual(){
         //cari buttonEqual terus di klik
         onView(withId(R.id.button_equal)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("=")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonMulti(){
         //cari buttonMulti terus di klik
         onView(withId(R.id.button_multi)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("×")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonDivide(){
         //cari buttonDivide terus di klik
         onView(withId(R.id.button_divide)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("/")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonAdd(){
         //cari buttonAdd terus di klik
         onView(withId(R.id.button_add)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("+")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonSub(){
         //cari buttonSub terus di klik
         onView(withId(R.id.button_sub)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("-")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonClear(){
         //cari buttonClear terus di klik
         onView(withId(R.id.button_clear)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("AC")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("")));
     }
     @Test
     public void testKlikButtonPara1(){
         //cari buttonPara1 terus di klik
         onView(withId(R.id.button_para1)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("%")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonPara2(){
         //cari buttonPara2 terus di klik
         onView(withId(R.id.button_para2)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("+/-")));
+        onView(withId(R.id.input)).check(matches(withText("")));
+        onView(withId(R.id.output)).check(matches(withText("Error")));
     }
     @Test
     public void testKlikButtonDot(){
